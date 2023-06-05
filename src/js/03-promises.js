@@ -32,4 +32,4 @@ function createPromise(position, delay) {
   } else {
     reject(data)
   }
-}delay;
+};
