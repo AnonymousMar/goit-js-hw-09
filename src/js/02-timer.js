@@ -38,10 +38,10 @@ const options = {
 flatpickr(timeInput, options);
 
 function getButtonStart() {
+    buttonStart.setAttribute("disabled", "disabled");
+    timeInput.setAttribute("disabled", "disabled");
     timerId = setInterval(() => {
         const targetDate = selectedDate - new Date();
-        buttonStart.setAttribute("disabled", "disabled");
-        timeInput.setAttribute("disabled", "disabled");
         stopTimeOut(targetDate);
         const convertObj = convertMs(targetDate);
         showDate(convertObj);
